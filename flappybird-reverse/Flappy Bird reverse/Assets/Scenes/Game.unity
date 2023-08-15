@@ -552,7 +552,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c9a859938c07126409aba7f571b0a910, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dd711d8b4d1c914459ed23373cfb6d52, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -571,8 +571,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 740245958}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.15922546, y: -1.66, z: 0}
-  m_LocalScale: {x: 2.3843358, y: 2.8558998, z: 1}
+  m_LocalPosition: {x: -2.776, y: -1.74, z: 0}
+  m_LocalScale: {x: 0.25185472, y: 0.22414823, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -612,9 +612,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.10788416, y: 0.19291714}
   serializedVersion: 2
-  m_Radius: 0.16
+  m_Radius: 1.8038335
 --- !u!114 &740245963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6045,6 +6045,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pipe: {fileID: 1774471423438078328, guid: 5d35868a9240e4f47abdf5682d58dfb8, type: 3}
   heightOffset: 2
+  gapSize: 5.075
 --- !u!4 &1860012540
 Transform:
   m_ObjectHideFlags: 0
@@ -6053,7 +6054,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1860012538}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.77, y: -1.95, z: -9.19814}
+  m_LocalPosition: {x: 10, y: 0, z: -9.19814}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6218,7 +6219,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 68c1414d5032a874da0eb11c4bab19af, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 66a886f54b0a8dd4ea5939d67cc88efe, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

@@ -10,12 +10,13 @@ public class PipeSpawner : MonoBehaviour
     
 
     public float heightOffset = 0.01f;
+    public float gapSize = 2.075f;
 
     private Camera mainCamera;
 
     void Start()
     {
-        
+        mainCamera = Camera.main;
         spawnPipe();
     }
 
@@ -36,13 +37,20 @@ public class PipeSpawner : MonoBehaviour
     }
 
 
-   void spawnPipe()
+    void spawnPipe()
     {
-        float lowestPoint = transform.position.y - heightOffset;
-        float highestPoint = transform.position.y + heightOffset;
- 
-        Instantiate(pipe, new Vector3(transform.position.x, Random.Range(lowestPoint, highestPoint), 0), transform.rotation);
+        // Get the lowest and highest point in the scene
+        float lowestPoint = mainCamera.ViewportToWorldPoint(new Vector3(0, 0, mainCamera.nearClipPlane)).y;
+        float highestPoint = mainCamera.ViewportToWorldPoint(new Vector3(0, 1, mainCamera.nearClipPlane)).y;
+    
+        // Make sure there is room for the gap to flap between
+        float lowestAllowedPoint = lowestPoint + gapSize;
+        float highestAllowedPoint = highestPoint - gapSize;
 
-       
+
+        Instantiate(pipe, new Vector3(transform.position.x, Random.Range(lowestAllowedPoint, highestAllowedPoint), 0), transform.rotation);
     }
+
+    //    Instantiate(pipe, new Vector3(transform.position.x, Random.Range(lowestPoint, highestPoint), 0), transform.rotation);
+
 }
